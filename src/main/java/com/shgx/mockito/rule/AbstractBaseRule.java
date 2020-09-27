@@ -1,5 +1,6 @@
 package com.shgx.mockito.rule;
 
+import com.shgx.mockito.engine.RuleCheckAssembler;
 import com.shgx.mockito.model.NewsBaseServiceCtx;
 import com.shgx.mockito.model.Result;
 import com.shgx.mockito.model.ResultCodeEnum;
@@ -48,13 +49,21 @@ public abstract class AbstractBaseRule implements BaseRule<NewsBaseServiceCtx> ,
      */
     public abstract String getCondition();
 
+    /**
+     * 将新闻规则注入到engine
+     * @throws Exception
+     */
     @Override
     public void afterPropertiesSet() throws Exception {
-
+        RuleCheckAssembler checkAssembler = applicationContext.getBean("ruleCheckAssembler", RuleCheckAssembler.class);
+        synchronized (checkAssembler.getRules()){
+            checkAssembler.getRules().add(this);
+            ruleFactory.put(this.getCondition(), this);
+        }
     }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-
+        this.applicationContext = applicationContext;
     }
 }
