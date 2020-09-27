@@ -14,6 +14,15 @@ public class Result {
      */
     private Map<String, Object> map;
 
+    public Result(ResultCodeEnum resultCodeEnum) {
+        this.resultCodeEnum = resultCodeEnum;
+    }
+
+    public Result(ResultCodeEnum resultCodeEnum, String errorMessage) {
+        this.resultCodeEnum = resultCodeEnum;
+        this.errorMessage = errorMessage;
+    }
+
     public Result(ResultCodeEnum resultCodeEnum, String errorMessage, Map<String, Object> map) {
         this.resultCodeEnum = resultCodeEnum;
         this.errorMessage = errorMessage;

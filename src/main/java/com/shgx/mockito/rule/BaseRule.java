@@ -1,6 +1,7 @@
 package com.shgx.mockito.rule;
 
 import com.shgx.mockito.model.BaseServiceCtx;
+import com.shgx.mockito.model.Result;
 
 /**
  * @author: guangxush
@@ -10,9 +11,17 @@ public interface BaseRule<T extends BaseServiceCtx> {
 
     /**
      * 规则码
+     *
      * @return
      */
     String getCode();
 
+    /**
+     * 新闻分析接口
+     *
+     * @param context
+     * @return
+     */
+    Result analyze(T context);
 
 }
