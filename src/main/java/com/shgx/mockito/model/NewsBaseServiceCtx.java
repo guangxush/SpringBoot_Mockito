@@ -17,6 +17,11 @@ public class NewsBaseServiceCtx extends BaseServiceCtx implements Serializable {
      */
     private String message;
 
+    /**
+     * 处理器
+     */
+    private String engine;
+
     public String getTopic() {
         return topic;
     }
@@ -31,5 +36,13 @@ public class NewsBaseServiceCtx extends BaseServiceCtx implements Serializable {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getEngine() {
+        return engine;
+    }
+
+    public void setEngine(String engine) {
+        this.engine = engine;
     }
 }

@@ -1,7 +1,6 @@
 package com.shgx.mockito.action;
 
 import com.shgx.mockito.engine.NewsCheckEngine;
-import com.shgx.mockito.model.ActionResult;
 import com.shgx.mockito.model.NewsBaseServiceCtx;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.InitializingBean;
@@ -12,7 +11,7 @@ import org.springframework.context.ApplicationContextAware;
  * @author: guangxush
  * @create: 2020/09/27
  */
-public abstract class AbstractNewsAction implements EngineAction<NewsBaseServiceCtx>, InitializingBean, ApplicationContextAware {
+public abstract class AbstractNewsCheckAction implements EngineAction<NewsBaseServiceCtx>, InitializingBean, ApplicationContextAware {
 
     protected ApplicationContext applicationContext;
 

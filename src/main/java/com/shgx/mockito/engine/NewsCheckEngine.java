@@ -2,12 +2,13 @@ package com.shgx.mockito.engine;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.shgx.mockito.action.AbstractNewsAction;
+import com.shgx.mockito.action.AbstractNewsCheckAction;
 import com.shgx.mockito.model.BaseServiceResult;
 import com.shgx.mockito.model.NewsBaseServiceCtx;
 import com.shgx.mockito.model.Result;
 import com.shgx.mockito.model.ResultCodeEnum;
 import com.shgx.mockito.rule.AbstractBaseRule;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Map;
@@ -16,6 +17,7 @@ import java.util.Map;
  * @author: guangxush
  * @create: 2020/09/27
  */
+@Component
 public class NewsCheckEngine implements RuleEngine<NewsBaseServiceCtx, BaseServiceResult>{
 
     /**
@@ -26,7 +28,7 @@ public class NewsCheckEngine implements RuleEngine<NewsBaseServiceCtx, BaseServi
     /**
      * 引擎可以执行的动作集合
      */
-    private List<AbstractNewsAction> newsActionList = Lists.newArrayList();
+    private List<AbstractNewsCheckAction> newsActionList = Lists.newArrayList();
 
     @Override
     public BaseServiceResult execute(NewsBaseServiceCtx context) {
@@ -40,7 +42,7 @@ public class NewsCheckEngine implements RuleEngine<NewsBaseServiceCtx, BaseServi
             resultMap.put(rule.getCode(), result);
         }
         checkResult.setResultMap(resultMap);
-        return null;
+        return checkResult;
     }
 
     @Override
@@ -56,11 +58,11 @@ public class NewsCheckEngine implements RuleEngine<NewsBaseServiceCtx, BaseServi
         this.ruleCheckAssembler = ruleCheckAssembler;
     }
 
-    public List<AbstractNewsAction> getNewsActionList() {
+    public List<AbstractNewsCheckAction> getNewsActionList() {
         return newsActionList;
     }
 
-    public void setNewsActionList(List<AbstractNewsAction> newsActionList) {
+    public void setNewsActionList(List<AbstractNewsCheckAction> newsActionList) {
         this.newsActionList = newsActionList;
     }
 }
