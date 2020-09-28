@@ -10,8 +10,5 @@
             </list>
         </property>
     </bean>
-
     <bean id="newsJexlParamSetter" class="com.shgx.mockito.engine.NewsJexlParamSetter"/>
-
-    <bean id="newsCheckEngine" class="com.shgx.mockito.engine.NewsCheckEngine"/>
 </beans>
