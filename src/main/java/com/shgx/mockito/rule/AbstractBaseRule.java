@@ -55,9 +55,9 @@ public abstract class AbstractBaseRule implements BaseRule<NewsBaseServiceCtx> ,
      */
     @Override
     public void afterPropertiesSet() throws Exception {
-        RuleCheckAssembler checkAssembler = applicationContext.getBean("ruleCheckAssembler", RuleCheckAssembler.class);
-        synchronized (checkAssembler.getRules()){
-            checkAssembler.getRules().add(this);
+        RuleCheckAssembler ruleCheckAssembler = applicationContext.getBean("ruleCheckAssembler", RuleCheckAssembler.class);
+        synchronized (ruleCheckAssembler.getRules()){
+            ruleCheckAssembler.getRules().add(this);
             ruleFactory.put(this.getCondition(), this);
         }
     }
