@@ -2,6 +2,7 @@ package com.shgx.mockito.engine;
 
 import com.shgx.mockito.model.NewsBaseServiceCtx;
 import junit.framework.TestCase;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,6 @@ public class NewsCheckEngineTest extends TestCase {
         newsBaseServiceCtx.setMessage("hello");
         newsBaseServiceCtx.setTopic("world");
         newsBaseServiceCtx.setEngine("newsCheckEngine");
-        newsCheckEngine.execute(newsBaseServiceCtx);
+        Assert.assertTrue(newsCheckEngine.execute(newsBaseServiceCtx).isSuccess());
     }
 }

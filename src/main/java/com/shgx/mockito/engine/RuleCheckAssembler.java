@@ -32,14 +32,14 @@ public class RuleCheckAssembler {
 
     public List<AbstractBaseRule> loadRules(NewsBaseServiceCtx ctx) {
         List<AbstractBaseRule> ruleList = new LinkedList<>();
-        if (CollectionUtils.isEmpty(ruleList)) {
+        if (CollectionUtils.isEmpty(rules)) {
             return ruleList;
         }
         JexlContext context = toJexlContext(ctx);
 
         rules.forEach(r -> {
             if (parseValue(r.getCondition(), context)) {
-                rules.add(r);
+                ruleList.add(r);
             }
         });
         return ruleList;
