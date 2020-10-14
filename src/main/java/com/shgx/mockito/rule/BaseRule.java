@@ -4,6 +4,8 @@ import com.shgx.mockito.model.BaseServiceCtx;
 import com.shgx.mockito.model.Result;
 
 /**
+ * 基本规则
+ *
  * @author: guangxush
  * @create: 2020/09/26
  */

@@ -2,6 +2,8 @@ package com.shgx.mockito.service;
 
 
 /**
+ * 抽象算法模型
+ *
  * @author: guangxush
  * @create: 2020/09/28
  */

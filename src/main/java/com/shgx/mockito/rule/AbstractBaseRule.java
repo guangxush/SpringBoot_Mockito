@@ -14,6 +14,8 @@ import org.springframework.util.StringUtils;
 import java.util.Map;
 
 /**
+ * 抽象规则
+ *
  * @author: guangxush
  * @create: 2020/09/26
  */

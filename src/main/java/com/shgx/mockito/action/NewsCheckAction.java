@@ -4,14 +4,13 @@ import com.google.common.collect.Maps;
 import com.shgx.mockito.engine.NewsCheckEngine;
 import com.shgx.mockito.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import java.util.Iterator;
 import java.util.Map;
 
 /**
  * 新闻信息校验入口
+ *
  * @author: guangxush
  * @create: 2020/09/28
  */

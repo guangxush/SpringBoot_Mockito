@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+ * 新闻判断接口
+ *
  * @author: guangxush
  * @create: 2020/09/28
  */

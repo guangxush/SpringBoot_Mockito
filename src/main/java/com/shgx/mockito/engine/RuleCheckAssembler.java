@@ -13,6 +13,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
+ * 条件执行装配器
+ *
  * @author: guangxush
  * @create: 2020/09/27
  */

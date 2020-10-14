@@ -2,10 +2,11 @@ package com.shgx.mockito.action;
 
 import com.shgx.mockito.model.ActionResult;
 import com.shgx.mockito.model.NewsBaseServiceCtx;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**
+ * 外部新闻分类引擎
+ *
  * @author: guangxush
  * @create: 2020/09/28
  */

@@ -6,6 +6,8 @@ import java.io.Serializable;
 import java.util.Map;
 
 /**
+ * 基本服务执行结果
+ *
  * @author: guangxush
  * @create: 2020/09/27
  */

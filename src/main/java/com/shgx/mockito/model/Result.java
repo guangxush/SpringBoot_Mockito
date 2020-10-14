@@ -3,6 +3,8 @@ package com.shgx.mockito.model;
 import java.util.Map;
 
 /**
+ * 执行结果
+ *
  * @author: guangxush
  * @create: 2020/09/26
  */

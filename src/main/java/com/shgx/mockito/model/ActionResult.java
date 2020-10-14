@@ -5,6 +5,8 @@ import com.google.common.collect.Maps;
 import java.util.Map;
 
 /**
+ * 动作执行结果
+ *
  * @author: guangxush
  * @create: 2020/09/27
  */

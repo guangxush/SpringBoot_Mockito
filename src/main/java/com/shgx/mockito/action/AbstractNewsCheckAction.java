@@ -8,6 +8,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
 /**
+ * 抽象新闻分类器
+ *
  * @author: guangxush
  * @create: 2020/09/27
  */

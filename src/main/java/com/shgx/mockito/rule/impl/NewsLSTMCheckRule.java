@@ -6,6 +6,8 @@ import com.shgx.mockito.service.impl.LSTMAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
+ * LSTM神经网络校验
+ *
  * @author: guangxush
  * @create: 2020/09/28
  */

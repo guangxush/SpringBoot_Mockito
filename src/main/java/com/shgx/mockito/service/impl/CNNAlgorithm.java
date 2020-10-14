@@ -4,6 +4,8 @@ import com.shgx.mockito.service.AbstractAlgorithm;
 import org.springframework.stereotype.Service;
 
 /**
+ * CNN算法
+ *
  * @author: guangxush
  * @create: 2020/09/28
  */

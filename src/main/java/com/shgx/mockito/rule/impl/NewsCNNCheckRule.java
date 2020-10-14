@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
+ * 卷积神经网络校验
+ *
  * @author: guangxush
  * @create: 2020/09/28
  */

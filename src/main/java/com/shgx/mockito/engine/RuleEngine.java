@@ -2,11 +2,12 @@ package com.shgx.mockito.engine;
 
 import com.shgx.mockito.model.BaseServiceCtx;
 import com.shgx.mockito.model.BaseServiceResult;
-import com.shgx.mockito.model.Result;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 
 /**
+ * 新闻判断引擎
+ *
  * @author: guangxush
  * @create: 2020/09/27
  */

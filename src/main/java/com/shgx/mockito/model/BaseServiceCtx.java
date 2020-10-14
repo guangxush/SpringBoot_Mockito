@@ -3,6 +3,8 @@ package com.shgx.mockito.model;
 import java.io.Serializable;
 
 /**
+ * 基本服务上下文
+ *
  * @author: guangxush
  * @create: 2020/09/26
  */

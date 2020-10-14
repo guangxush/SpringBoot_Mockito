@@ -1,6 +1,8 @@
 package com.shgx.mockito.model;
 
 /**
+ * 结果枚举值
+ *
  * @author: guangxush
  * @create: 2020/09/26
  */
