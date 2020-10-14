@@ -10,5 +10,8 @@
             </list>
         </property>
     </bean>
+    <bean id="newsCheckEngine" class="com.shgx.mockito.engine.NewsCheckEngine">
+        <property name="ruleCheckAssembler" ref="ruleCheckAssembler"/>
+    </bean>
     <bean id="newsJexlParamSetter" class="com.shgx.mockito.engine.NewsJexlParamSetter"/>
 </beans>

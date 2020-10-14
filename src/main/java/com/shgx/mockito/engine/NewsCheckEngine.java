@@ -18,7 +18,6 @@ import java.util.Map;
  * @author: guangxush
  * @create: 2020/09/27
  */
-@Component
 public class NewsCheckEngine implements RuleEngine<NewsBaseServiceCtx, BaseServiceResult>{
 
     /**
