@@ -1,5 +1,6 @@
 package com.shgx.mockito.service.impl;
 
+import com.shgx.mockito.model.AlgorithmDO;
 import com.shgx.mockito.service.AbstractAlgorithm;
 import org.springframework.stereotype.Service;
 
@@ -12,12 +13,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class LSTMAlgorithm extends AbstractAlgorithm {
     @Override
-    public void buildMode() {
+    public void buildMode(AlgorithmDO algorithm) {
 
     }
 
     @Override
-    public boolean useModel(String input) {
+    public boolean useModel(AlgorithmDO algorithm) {
         return true;
     }
 }

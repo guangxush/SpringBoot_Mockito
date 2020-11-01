@@ -1,6 +1,9 @@
 package com.shgx.mockito.service.impl;
 
+import com.shgx.mockito.dal.BayesAlgorithmDAL;
+import com.shgx.mockito.model.AlgorithmDO;
 import com.shgx.mockito.service.AbstractAlgorithm;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -11,13 +14,17 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class BayesAlgorithm extends AbstractAlgorithm {
+
+    @Autowired
+    private BayesAlgorithmDAL bayesAlgorithmDAL;
+
     @Override
-    public void buildMode() {
+    public void buildMode(AlgorithmDO algorithm) {
 
     }
 
     @Override
-    public boolean useModel(String input) {
-        return true;
+    public boolean useModel(AlgorithmDO algorithm) {
+        return bayesAlgorithmDAL.findResultByKey(algorithm.getId());
     }
 }

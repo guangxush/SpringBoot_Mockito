@@ -1,5 +1,6 @@
 package com.shgx.mockito.rule.impl;
 
+import com.shgx.mockito.model.AlgorithmDO;
 import com.shgx.mockito.model.NewsBaseServiceCtx;
 import com.shgx.mockito.rule.AbstractBaseRule;
 import com.shgx.mockito.service.impl.CNNAlgorithm;
@@ -20,7 +21,11 @@ public class NewsCNNCheckRule extends AbstractBaseRule {
     @Override
     public String check(NewsBaseServiceCtx context) {
         String message = context.getMessage();
-        if (cnnAlgorithm.useModel(message)) {
+        AlgorithmDO algorithmDO = new AlgorithmDO();
+        algorithmDO.setParam(message);
+        algorithmDO.setId("123");
+        algorithmDO.setVersion("V0.1");
+        if (cnnAlgorithm.useModel(algorithmDO)) {
             return "";
         }
         return "属于负面新闻";

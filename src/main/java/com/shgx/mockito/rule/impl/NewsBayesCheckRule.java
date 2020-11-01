@@ -1,5 +1,6 @@
 package com.shgx.mockito.rule.impl;
 
+import com.shgx.mockito.model.AlgorithmDO;
 import com.shgx.mockito.model.NewsBaseServiceCtx;
 import com.shgx.mockito.rule.AbstractBaseRule;
 import com.shgx.mockito.service.impl.BayesAlgorithm;
@@ -21,7 +22,11 @@ public class NewsBayesCheckRule extends AbstractBaseRule {
     @Override
     public String check(NewsBaseServiceCtx context) {
         String message = context.getMessage();
-        if(bayesAlgorithm.useModel(message)){
+        AlgorithmDO algorithmDO = new AlgorithmDO();
+        algorithmDO.setParam(message);
+        algorithmDO.setId("123");
+        algorithmDO.setVersion("V0.1");
+        if(bayesAlgorithm.useModel(algorithmDO)){
             return "";
         }
         return "属于负面新闻";

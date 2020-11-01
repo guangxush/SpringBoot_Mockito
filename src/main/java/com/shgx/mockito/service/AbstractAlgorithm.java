@@ -1,6 +1,8 @@
 package com.shgx.mockito.service;
 
 
+import com.shgx.mockito.model.AlgorithmDO;
+
 /**
  * 抽象算法模型
  *
@@ -11,24 +13,24 @@ public abstract class AbstractAlgorithm {
     /**
      * 训练模型
      */
-    public void trainModel(String input) {
+    public void trainModel(AlgorithmDO algorithm) {
     }
 
     /**
      * 测试模型
      */
-    public void testModel(String input) {
+    public void testModel(AlgorithmDO algorithmDO) {
     }
 
     /**
      * 构建模型
      */
-    public abstract void buildMode();
+    public abstract void buildMode(AlgorithmDO algorithm);
 
     /**
      * 使用模型
-     * @param input
+     * @param algorithm
      * @return
      */
-    public abstract boolean useModel(String input);
+    public abstract boolean useModel(AlgorithmDO algorithm);
 }
