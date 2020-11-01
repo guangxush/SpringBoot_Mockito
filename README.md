@@ -24,6 +24,18 @@
 2.1 使用when then设置参数和预期返回值进行Mock测试
 
 ```java
+     /**
+     * 被标记了@InjectMocks , 在myBefore方法中 执行 MockitoAnnotations.initMocks(this); 的时候，会将标记了 @Mock 或 @Spy 的属性注入到 service 中。
+     */
+     @InjectMocks
+     private NewsCheckAction newsCheckAction;
+
+    /**
+     * @Mock, 那就是通常的方式，service里面的provider完全被Mock实例替换，所有的调用都是针对Mock生成类的。
+     */
+     @Mock
+     private NewsCheckEngine newsCheckEngine; 
+
     /**
      * 定义需要“假执行”的方法，并预先设定好该方法需要返回的值。当底层执行到该方法时，
      * 不会真正执行方法并返回自己预先设定好的值。
